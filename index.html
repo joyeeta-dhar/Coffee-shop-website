@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Coffee Shop - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle">
+        <button onclick="toggleDarkMode()">
+            <i class="fas fa-moon"></i> Dark Mode
+        </button>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <img src="logoo.jpg" alt="Coffee Shop Logo">
+            </a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="order-button">
+    <i class="fas fa-coffee"></i>  Order Now
+</button>
+
+        </nav>
+    </header>
+
+    <!-- Hero Section (Parallax) -->
+    <section id="hero">
+        <div class="parallax-bg"></div>
+        <div class="hero-content">
+            <!-- <img src="cof1.jpeg"> -->
+            <h1>Brewed to Perfection, Served with Love</h1>
+            <p>Experience the finest coffee in town.</p>
+            <!-- <button class="cta-button">View Menu</button> -->
+            <a href="menu.html" class="view-all-button">View Menu</a>
+        </div>
+    </section>
+
+    <!-- About Us Preview Section -->
+    <section id="about-preview" class="container fade-in">
+        <!-- <h2>About Us</h2> -->
+        <p>Learn about our story, our philosophy, and our commitment to quality.</p>
+        <a href="about.html" class="read-more-button">Read More</a>
+    </section>
+
+    <!-- Featured Menu Items -->
+    <section id="featured-menu" class="container fade-in">
+        <h2>Featured Menu Items</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <img src="espresso.jpg" alt="Espresso">
+                <h3>Espresso</h3>
+                <p>Rich and intense, the perfect pick-me-up.</p>
+            </div>
+            <div class="menu-item">
+                <img src="latte.jpg" alt="Latte">
+                <h3>Latte</h3>
+                <p>Creamy and smooth, a classic favorite.</p>
+            </div>
+            <div class="menu-item">
+                <img src="crossaint.jpg" alt="Pastry">
+                <h3>Croissant</h3>
+                <p>Flaky and buttery, the ideal complement to your coffee.</p>
+            </div>
+        </div>
+        <a href="menu.html" class="view-all-button">View Full Menu</a>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section id="newsletter" class="container fade-in">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Stay up-to-date with our latest news, offers, and events.</p>
+        <form id="newsletter-form">
+            <input type="email" placeholder="Enter your email address" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 The Coffee Shop. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Coffee Shop - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- </head> -->
+    <title>Menu - The Coffee Shop</title>
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #f8f5f2;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, footer {
+            background-color: #f3f1ed;
+            padding: 20px 0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        .order-button {
+             background-color: var(--deep-olive-green);
+    color: var(--creamy-beige);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .dark-mode-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .menu-categories {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0 20px;
+            gap: 15px;
+        }
+
+        .menu-categories button {
+            padding: 10px 20px;
+            background-color: #fff;
+            border: 2px solid #ccc;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .menu-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .menu-item {
+            background-color: white;
+            border-radius: 10px;
+            padding: 15px;
+            width: 250px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #2e4e2d;
+        }
+
+        footer {
+             background-color: var(--espresso-brown);
+             color: var(--creamy-beige);
+             text-align: center;
+             padding: 30px 0;  
+}
+
+footer p {
+    margin-bottom: 15px;
+}
+
+.social-links a {
+    color: var(--creamy-beige);
+    font-size: 1.3em;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+        .hidden {
+            display: none;
+        }
+
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #eee;
+        }
+
+        body.dark-mode .menu-item {
+            background-color: #2a2a2a;
+            color: white;
+        }
+
+        body.dark-mode .menu-categories button {
+            background-color: #444;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle">
+        <button onclick="toggleDarkMode()">
+            🌙 Dark Mode
+        </button>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="#" class="logo"><img src="logoo.jpg" alt="Logo"></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="order-button">Order Now</button>
+        </nav>
+    </header>
+
+    <!-- Menu Section -->
+    <section class="container">
+        <h2 style="text-align:center;">Our Menu</h2>
+
+        <div class="menu-categories">
+            <button data-category="coffee">Coffee</button>
+            <button data-category="tea">Tea</button>
+            <button data-category="pastries">Pastries</button>
+            <button data-category="vegan">Vegan</button>
+        </div>
+
+        <!-- Coffee -->
+        <div class="menu-items" data-category="coffee">
+            <div class="menu-item">
+                <img src="Espresso.webp" alt="Espresso">
+                <h3>Espresso</h3>
+                <p>Concentrated coffee beverage.</p>
+                <p class="price">$3.00</p>
+            </div>
+            <div class="menu-item">
+                <img src="latte.jpg" alt="Latte">
+                <h3>Latte</h3>
+                <p>Espresso with steamed milk and foam.</p>
+                <p class="price">$4.50</p>
+            </div>
+            <div class="menu-item">
+                <img src="americano.webp" alt="Americano">
+                <h3>Americano</h3>
+                <p> Americano is a coffee drink made by adding hot water to espresso.</p>
+                <p class="price">$4.00</p>
+            </div>
+            <div class="menu-item">
+                <img src="cold brew.jpg" alt="Cold Brew">
+                <h3>Cold Brew</h3>
+                <p>steeping coffee in water for a number of hours at cold or ambient (room) temperature.</p>
+                <p class="price">$5.00</p>
+            </div>
+            <div class="menu-item">
+                <img src="cappuccino.jpg" alt="Cappuccino">
+                <h3>Cappuccino</h3>
+                <p>A cappuccino typically has a 1:1:1 ratio of espresso, steamed milk, and foamed milk.</p>
+                <p class="price">$4.50</p>
+            </div>
+            <div class="menu-item">
+                <img src="mocha.webp" alt="Mocha">
+                <h3>Mocha</h3>
+                <p>A mocha is a coffee drink that traditionally combines the flavors of espresso, steamed milk and chocolate.</p>
+                <p class="price">$5.00</p>
+            </div>
+        </div>
+
+        <!-- Tea -->
+        <div class="menu-items hidden" data-category="tea">
+            <div class="menu-item">
+                <img src="black tea.png" alt="Black Tea">
+                <h3>Black Tea</h3>
+                <p>Strong and flavorful black tea.</p>
+                <p class="price">$2.50</p>
+            </div>
+            <div class="menu-item">
+                <img src="green tea.jpg" alt="Green Tea">
+                <h3>Green Tea</h3>
+                <p>Delicate and refreshing green tea.</p>
+                <p class="price">$3.50</p>
+            </div>
+            <div class="menu-item">
+                <img src="white tea.webp" alt="White Tea">
+                <h3>White Tea</h3>
+                <p> Minimally processed, with a delicate flavor and lower caffeine than black or green tea. </p>
+                <p class="price">$2.50</p>
+            </div>
+            <div class="menu-item">
+                <img src="oolong tea.jpg" alt="Oolong Tea">
+                <h3>Oolong Tea</h3>
+                <p>Partially oxidized, offering a range of flavors depending on the level of oxidation. </p>
+                <p class="price">$4.00</p>
+            </div>
+            <div class="menu-item">
+                <img src="Pu-erh-Tea.webp" alt="Pu-erh Tea">
+                <h3>Pu-erh Tea</h3>
+                <p>Fermented and aged, known for its earthy flavor and potential health benefits. </p>
+                <p class="price">$5.50</p>
+            </div>
+            <div class="menu-item">
+                <img src="yellotea.jpg" alt="Yellow Tea">
+                <h3>Yellow Tea</h3>
+                <p> A rare type, similar to green tea but with a unique drying process that gives it a yellow hue and a mild, smooth taste. </p>
+                <p class="price">$4.50</p>
+            </div>
+        </div>
+
+        <!-- Pastries -->
+        <div class="menu-items hidden" data-category="pastries">
+            <div class="menu-item">
+                <img src="crossaint.jpg" alt="Croissant">
+                <h3>Croissant</h3>
+                <p>Buttery and flaky pastry.</p>
+                <p class="price">$6.50</p>
+            </div>
+            <div class="menu-item">
+                <img src="Danishes_.jpg" alt="Danishes">
+                <h3>Danishes</h3>
+                <p>Buttery and flaky pastry.</p>
+                <p class="price">$12.50</p>
+            </div>
+            <div class="menu-item">
+                <img src="cannoli.jpg" alt="Cannoli">
+                <h3>Cannoli</h3>
+                <p>Buttery and flaky pastry.</p>
+                <p class="price">$10.00</p>
+            </div>
+            <div class="menu-item">
+                <img src="strudel.webp" alt="Strudel">
+                <h3>Strudel</h3>
+                <p>Buttery and flaky pastry.</p>
+                <p class="price">$8.50</p>
+            </div>
+        </div>
+
+        <!-- Vegan -->
+        <div class="menu-items hidden" data-category="vegan">
+            <div class="menu-item">
+                <img src="vegan muffins.jpg" alt="Vegan Muffin">
+                <h3>Vegan Muffin</h3>
+                <p>Gluten-free and delicious.</p>
+                <p class="price">$8.00</p>
+            </div>
+            <div class="menu-item">
+                <img src="Vegan-brownies.webp" alt="Vegan Brownies">
+                <h3>Vegan Brownies</h3>
+                <p>Gluten-free and delicious.</p>
+                <p class="price">$10.00</p>
+            </div>
+            <div class="menu-item">
+                <img src="vegan-pancake.jpg" alt="Vegan Pancakes">
+                <h3>Vegan Pancakes</h3>
+                <p>Gluten-free and delicious.</p>
+                <p class="price">$12.00</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+     <footer>
+        <div class="container">
+            <p>&copy; 2025 The Coffee Shop. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle("dark-mode");
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const buttons = document.querySelectorAll(".menu-categories button");
+            const sections = document.querySelectorAll(".menu-items");
+
+            buttons.forEach(button => {
+                button.addEventListener("click", () => {
+                    const selected = button.getAttribute("data-category");
+                    sections.forEach(section => {
+                        if (section.getAttribute("data-category") === selected) {
+                            section.classList.remove("hidden");
+                        } else {
+                            section.classList.add("hidden");
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
+
+

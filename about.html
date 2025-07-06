@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - The Coffee Shop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle">
+        <button onclick="toggleDarkMode()">
+            <i class="fas fa-moon"></i> Dark Mode
+        </button>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">
+                <img src="logoo.jpg" alt="Coffee Shop Logo">
+            </a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="order-button">Order Now</button>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <section id="about-main" class="container fade-in">
+        <h2>Our Story</h2>
+        <p>Founded in 2020, The Coffee Shop started with a simple mission: to bring the highest quality coffee to our community. We source our beans from the best farms around the world, and roast them in-house to ensure maximum freshness and flavor.</p>
+
+        <h2>Our Philosophy</h2>
+        <p>We believe in sustainability, ethical sourcing, and supporting local businesses. That's why we partner with local farmers and suppliers whenever possible. We are committed to reducing our environmental impact and giving back to our community.</p>
+
+        <div class="team-photos">
+            <img src="mem1.jpg" alt="Team Member 1">
+            <img src="mem2.webp" alt="Team Member 2">
+            <img src="mem3.jpg" alt="Team Member 3">
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 The Coffee Shop. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
